@@ -1,0 +1,30 @@
+
+.title{
+    position: absolute;
+    top: 20px;
+    color: rgba(52, 73, 94, 1.0);
+}
+
+.block-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 400px;
+}
+
+.autocomplete{
+    width: 90%;
+    margin: 20px 0;
+}
+.text-field{
+    width: 100%;
+}
+
+.MuiAutocomplete-option{
+    background-color: transparent !important;
+    &:hover{
+        background-color: rgb(170, 107, 107);
+    }
+}
