@@ -1,3 +1,4 @@
+import {api} from "../api/Api";
 
 
 export const startSerching = (word) => ({
@@ -19,3 +20,12 @@ export const searchedDetailsAsync = (details) => ({
     type: 'SET_DETAILS',
     payload: details,
 });
+
+export const putData = (data) => ({
+    type: 'TEST',
+    payload: data
+})
+
+export const thunkTestAsync = () => (dispatch, getState) => {
+    api.fetch.testThunk().then(data => dispatch(putData(data)))
+}

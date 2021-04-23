@@ -8,8 +8,6 @@ import { Details } from '../../pages/details/Details';
 import {useSelector} from "react-redux";
 
 export const AppRouter = () => {
-	const { details } = useSelector(state => state.supers)
-	console.log(details)
 	return (
 		<Router>
 			<Switch>

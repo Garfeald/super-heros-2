@@ -19,7 +19,8 @@ export const Images = () => {
     const dispatch = useDispatch();
 
     const showDetails = (id) => {
-        history.push('/details')
+        const curName = supers.filter((item) => item.id === id)
+        history.push(`/details/:${curName[0].name}`)
         dispatch(startSerchingDetails(id))
     }
 

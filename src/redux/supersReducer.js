@@ -20,6 +20,11 @@ const initialState = {
             ...state,
             details: action.payload,
           }
+        case 'TEST':
+          return {
+            ...state,
+            details: action.payload
+          }
         default:
           return state;
   }

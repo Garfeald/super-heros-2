@@ -10,6 +10,9 @@ export const api = {
             axios.get(`https://www.superheroapi.com/api.php/${accessToken}/search/${payload}`),
 
         fetchDetails: (payload) => 
-            axios.get(`https://www.superheroapi.com/api.php/${accessToken}/${payload}`)
+            axios.get(`https://www.superheroapi.com/api.php/${accessToken}/${payload}`),
+
+        testThunk: () =>
+            axios.get(`https://www.superheroapi.com/api.php/${accessToken}/search/bat`)
     }
 }
