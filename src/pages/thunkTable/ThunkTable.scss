@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .table-image{
@@ -10,8 +11,12 @@
   height: 100px;
 }
 
-.spinner{
-  margin-top: 200px;
+.table-spinner{
+  margin-top: 300px;
+}
+
+.table-title{
+  margin-top: 50px;
 }
 
 table {

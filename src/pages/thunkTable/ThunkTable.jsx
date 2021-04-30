@@ -7,6 +7,7 @@ export const ThunkTable = () => {
     const { details } = useSelector(state => state.supers)
     return (
         <div className="block-table">
+            <h1 className="table-title">ThunkTable</h1>
             {
                 details.length > 1
                     ?   <table>
@@ -29,7 +30,7 @@ export const ThunkTable = () => {
                                 ))}
                         </tbody>
                     </table>
-                    :  <Spinner className="spinner" />
+                    :  <Spinner className="table-spinner" />
             }
         </div>
     );
