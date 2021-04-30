@@ -20,7 +20,7 @@ const initialState = {
             ...state,
             details: action.payload,
           }
-        case 'TEST':
+        case 'PUT_DATA':
           return {
             ...state,
             details: action.payload

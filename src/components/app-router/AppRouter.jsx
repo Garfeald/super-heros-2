@@ -5,7 +5,7 @@ import { Images } from '../../pages/images/Images';
 import { NotFound } from '../../pages/notfound/NotFound';
 import { Search } from '../../pages/search/Search'
 import { Details } from '../../pages/details/Details';
-import {useSelector} from "react-redux";
+import {ThunkTable} from "../../pages/thunkTable/ThunkTable";
 
 export const AppRouter = () => {
 	return (
@@ -15,6 +15,7 @@ export const AppRouter = () => {
 				<Route path="/images" component={Images} />
 				<Route path="/details/:name" component={Details} />
 				<Route path="/search/" component={Search} />
+				<Route path="/thunk-table/" component={ThunkTable} />
 				<Route component={NotFound} />
 				<Redirect from="*" to="/" />
 			</Switch>
