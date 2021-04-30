@@ -26,16 +26,16 @@ export const putData = (data) => ({
     payload: data
 })
 
-// export const thunkTestAsync = () => (dispatch, getState) => {
-//     api.fetch.testThunk().then(data => dispatch(putData(data)))
-// }
-
 export const thunkTestAsync = () => {
     return async (dispatch) => {
         try {
-            dispatch({type: "TEST_THUNK"})
-            const response = await api.fetch.testThunk()
-            console.log(response.data)
+            let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            let word = '';
+            for(let i = 0; i < 1; i++){
+                word += alphabet[Math.round(Math.random() * (alphabet.length - 1))];
+            }
+            dispatch({type: "TEST_THUNK", payload: word})
+            const response = await api.fetch.testThunk(word)
             setTimeout(() => {
                 dispatch({type: "PUT_DATA", payload: response.data.results})
             }, 1500)

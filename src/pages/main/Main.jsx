@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 import './Main.scss'
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {startSerching, thunkTestAsync} from '../../redux/actions';
 
 
@@ -18,7 +18,9 @@ export const Main = () => {
 		for(let i = 0; i < 1; i++){
 			word += alphabet[Math.round(Math.random() * (alphabet.length - 1))];
 		}
-		dispatch(startSerching(word))
+		setTimeout(() => {
+			dispatch(startSerching(word))
+		}, 2000)
 	}
 
 	const moveToSearch = () => {
@@ -35,7 +37,7 @@ export const Main = () => {
 		<div className="block-button">
 			<button onClick={moveToImages} className="button">ShowSuperHerosImages</button>
 			<button  onClick={moveToSearch} className="button">ShowSuperHerosSearch</button>
-			<button onClick={testThunk} className="button">thunk</button>
+			<button onClick={testThunk} className="button">ThunkTable</button>
 		</div>
 	</>
 	)
